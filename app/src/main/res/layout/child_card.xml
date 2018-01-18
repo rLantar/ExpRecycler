@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="child"
+            type="com.lantar.testtask.data.network.model.Child" />
+
+        <variable
+            name="click"
+            type="com.lantar.testtask.ui.adapters.CheckRecyclerView.OnCheckedChanged" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="@{child.observableStatus.get()}"
+            android:onCheckedChanged="@{(switch, checked) -> click.onCheckedChanged(child, checked)}"
+            android:text="@{child.name}" />
+
+    </LinearLayout>
+
+</layout>

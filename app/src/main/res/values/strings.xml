@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestTask</string>
+    <string name="server_url">https://e97b7234-fde2-4f99-8414-b368658a363b.mock.pstmn.io</string>
+</resources>
